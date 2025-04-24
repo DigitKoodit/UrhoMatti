@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-router-dom": "^5.0.1",
+    "react-router-dom": "^7.5.2",
     "react-scripts": "^4.0.3",
     "react-select": "^5.0.0",
     "workbox-background-sync": "^5.1.3",
