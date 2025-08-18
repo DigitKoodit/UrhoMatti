@@ -8,8 +8,8 @@ class Search extends Component {
     const options = [
       content.map((song) => {
         return {
-          value: song.id < 100 ? `${song.title}` : `${song.id}`,
-          label: `${song.id}. ${song.title} ${song.title.includes('40') ? ' %' : ''}`,
+          value: song.id < 100 ? `${song.title}` : (song.version ? song.id + song.version : song.id),
+          label: `${(song.version ? song.id + song.version : song.id)}. ${song.title} ${song.title.includes('40') ? ' %' : ''}`,
         };
       }),
     ];

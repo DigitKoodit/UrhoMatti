@@ -2,8 +2,8 @@
 
 Available on [urhomatti.fi](https://urhomatti.fi)
 
-Digital version of Urho Matti 3.0 songbook.
-Urho Matti 3.0 is the newest songbook for Finnish engineering student organizations in Turku. The book was published in December 2019 along with the digital version.
+Digital version of Urho Matti 4.0 songbook.
+Urho Matti 4.0 is the newest songbook for Finnish engineering student organizations in Turku. The physical book was published in the end of 2024, and the digital version in 2025.
 
 A PWA App developed with React. The application is also available [on Google Play](https://play.google.com/store/apps/details?id=fi.urhomatti.twa) The song and category data is fetched from a json file and no backend functionality is needed. The datamodel for the json file can be found below.
 

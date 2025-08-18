@@ -49,7 +49,7 @@ class Song extends Component {
         <>
           <div className="page song-page">
             <p className="song-header">
-              {song.id}. {song.title}
+              {(song.version ? song.id + song.version : song.id)}. {song.title}
             </p>
             <p className="song-melody">{song.melody}</p>
             <p className="song-lyrics">{song.lyrics.join('\n')}</p>

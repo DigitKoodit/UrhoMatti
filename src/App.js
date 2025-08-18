@@ -11,7 +11,6 @@ import db from './db.json';
 class App extends Component {
 
     render() {
-
         let viewport = document.querySelector("meta[name=viewport]");
         viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
 
@@ -22,8 +21,13 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={LandingPage} />
                         <Route
-                            path="/:id(\d+)"
-                            render={(path) => <Song song={db["songs"].find((song) => (song.id) === parseInt(path.match.params.id))} />}
+                            path="/:id([\d]+[a-z]*)"
+                            render={(path) => 
+                              <Song song={(db["songs"].find((song) => song.version ? 
+                                (song.id + song.version) === path.match.params.id : 
+                                song.id === parseInt(path.match.params.id)))} 
+                              />
+                            }
                         />
                         <Route
                             path="/:title(Juhlavat|Joulu|<3|Rock|Tupsulaulut|Sitsit|<40 vol.|>40 vol.|Undefined|Tuhmeliinit!|Älä laula!)/"
