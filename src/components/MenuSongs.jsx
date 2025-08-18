@@ -6,7 +6,7 @@ class MenuSongs extends Component {
 		return (
 			<div className="category-songs">
 				{this.props.songs.map(song => (
-					<a className="menu-song" href={song.id} key={song.id}>
+					<a className="menu-song" href={song.id} key={(song.version ? song.id + song.version : song.id)}>
 						{song.id}. {song.title}
 					</a>
 				))}

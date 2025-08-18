@@ -8,16 +8,11 @@ class Rules extends Component {
 					<div className="rules">
 						<p className="song-header">{'Pikasäännöt'}</p>
 						<p className="song-lyrics">
-							{'• Pääsääntöisesti illan daami istuu herran oikealla puolella.'}
-						</p>
-						<p className="song-lyrics">
 							{'• Skoolaus:\n'}
 							<span className="indent">
-								{'Herrat: oikea-vasen-eteen\n'}
+								{'Etuviistoon oikealle - Etuviistoon vasemmalle - Eteen\n'}
 							</span>
-							<span className="indent">
-								{'Daamit: vasen-oikea-eteen'}
-							</span>
+							
 						</p>
 
 						<p className="song-lyrics">
@@ -39,10 +34,10 @@ class Rules extends Component {
 							<p className="song-lyrics">
 								{'TEMPO – hidastetaan tai nopeutetaan laulua määreen mukaan, kuitenkin enintään 2 säkeistön välein'}
 							</p>
+							<p className="song-lyrics">
+								{'• Edellisiä huuhdahtanut aloittakoon seuraavan säkeistön oikeassa tahdissa.'}
+							</p>
 						</div>
-						<p className="song-lyrics">
-							{'• Edellisiä huuhdahtanut aloittakoon seuraavan säkeistön oikeassa tahdissa.'}
-						</p>
 					</div>
 				</div>
 				<div className="song-footer">
