@@ -6,9 +6,12 @@ env:
   OUTPUT_LOCATION: "build" # location of client code build output
 
 on:
-  #push:
-  #  branches:
-  #  - master
+  push:
+    branches:
+    - master
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize]
   workflow_dispatch:
 
 jobs:
@@ -24,12 +27,13 @@ jobs:
     - run: npm ci
     - run: npm run build
     
-    - name: Build And Deploy
+    - name: Build And Deploy to Azure
+      if: ${{github.event_name == 'push' && !contains(github.event.head_commit.message, '#skip') }}
       uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9
       with:
         azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_TOKEN }}
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         action: "upload"
-        app_location: "/"
-        api_location: ""
-        output_location: "build"
+        app_location: ${{ env.APP_LOCATION }}
+        api_location: ${{ env.API_LOCATION }}
+        output_location: ${{ env.OUTPUT_LOCATION }}
