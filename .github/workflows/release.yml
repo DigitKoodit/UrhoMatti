@@ -1,31 +1,35 @@
-name: Release Website
+name: Release UrhoMatti static website
+
+env:
+  APP_LOCATION: "/" # location of client code
+  API_LOCATION: "" # location of api source code - optional
+  OUTPUT_LOCATION: "build" # location of client code build output
 
 on:
-  push:
-    branches:
-    - master
+  #push:
+  #  branches:
+  #  - master
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-
-    # Build React app
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v4
       with:
-        node-version: '14'
-        cache: 'npm'
-    - run: npm install
+        submodules: true
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - run: npm ci
     - run: npm run build
-
-    # Release built app to S3
-    - uses: jakejarvis/s3-sync-action@master
+    
+    - name: Build And Deploy
+      uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9
       with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'eu-north-1'    # Stockholm
-        SOURCE_DIR: 'build'         # output of npm run build
+        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        action: "upload"
+        app_location: "/"
+        api_location: ""
+        output_location: "build"
