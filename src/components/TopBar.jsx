@@ -30,7 +30,7 @@ class TopBar extends Component {
 				<a href="/" className="top-bar-heading">
 					<img
 						src="/images/topbar.png"
-						alt="Urho Matti 3.0"
+						alt="Urho Matti 4.0"
 						height="29px"
 						width="237px"
 					/>
