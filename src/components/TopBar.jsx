@@ -28,12 +28,7 @@ class TopBar extends Component {
 		return (
 			<div id="top-bar" className="top-bar">
 				<a href="/" className="top-bar-heading">
-					<img
-						src="/images/topbar.png"
-						alt="Urho Matti 4.0"
-						height="29px"
-						width="237px"
-					/>
+					<span style={{ fontSize: "30px", color: "#FED700", fontFamily: "Courier", fontWeight: "bold" }}>Urho Matti 4.0</span>
 				</a>
 				<MenuButton
 					onClick={this.toggleMenuButton}

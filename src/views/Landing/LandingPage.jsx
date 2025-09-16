@@ -13,13 +13,13 @@ class LandingPage extends Component {
         <div className="landing-image-container">
           <img
             className="landing-image"
-            src="/images/landing.svg"
-            alt="Urho Matti 3.0 logo"
+            src="/images/urhomatti4_logo_yellow.svg"
+            alt="Urho Matti 4.0 logo"
             height="100%"
             width="100%"
           />
           <a
-            href="https://github.com/DigitKoodit/UrhoMatti-3.0"
+            href="https://github.com/DigitKoodit/UrhoMatti"
             className="self-promotion-link"
             target="_blank"
             rel="noopener noreferrer"
