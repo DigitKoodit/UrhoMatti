@@ -186,8 +186,8 @@ body {
 
 .landing-image {
   flex: auto;
-  height: 85vh;
-  width: 100vw;
+  height: 80vh;
+  width: 80vw;
 }
 
 .self-promotion-link {
