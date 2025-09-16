@@ -1,6 +1,6 @@
 {
-  "short_name": "Urho Matti",
-  "name": "Urho Matti 3.0 - laulukirja",
+  "short_name": "urho matti",
+  "name": "urho matti 4.0 - laulukirja",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +8,18 @@
       "type": "image/x-icon"
     },
     {
-      "src": "icon-um3-192.png",
+      "src": "icon-um4-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-um3-512.png",
+      "src": "icon-um4-512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
       "src": "maskable_icon.png",
-      "sizes": "196x196",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
