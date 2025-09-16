@@ -13,7 +13,7 @@ class LandingPage extends Component {
         <div className="landing-image-container">
           <img
             className="landing-image"
-            src="/images/urhomatti4_logo_yellow.svg"
+            src="/images/urhomatti4_logo_yellow_with_separators.svg"
             alt="Urho Matti 4.0 logo"
             height="100%"
             width="100%"
