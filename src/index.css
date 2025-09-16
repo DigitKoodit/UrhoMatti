@@ -186,13 +186,14 @@ body {
 
 .landing-image {
   flex: auto;
-  width: 60vw;
+  height: 65vh;
+  width: 100vw;
 }
 
 .self-promotion-link {
   transform: translate(-50%);
   position: absolute;
-  top: 63vh;
+  top: 60vh;
   left: 25%;
 }
 
