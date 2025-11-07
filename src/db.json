@@ -1671,6 +1671,7 @@
         },
         {
             "id": 610,
+            "version": "a",
             "title": "T\u00e4n\u00e4\u00e4n otetaan",
             "lyrics": [
                 ":,: T\u00e4n\u00e4\u00e4n otetaan, t\u00e4n\u00e4\u00e4n otetaan",
@@ -1699,6 +1700,7 @@
         },
         {
             "id": 610,
+            "version": "b",
             "title": "T\u00e4n\u00e4\u00e4n otetaan sivistyneesti",
             "lyrics": [
                 ":,: Tänään otetaan, tänään otetaan",
